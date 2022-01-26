@@ -1,0 +1,18 @@
+﻿
+@model IEnumerable<onlineshoppingstore.Models.Category>
+@{
+    ViewBag.Title = "Store";
+}
+<h2>Browse Category</h2>
+<p>
+    Select from @Model.Count()
+    categories:
+</p>
+<ul>
+    //i tregon kategorite si linqqe//
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.Name, "Browse", new { Category = category.Name })</li>
+    }
+</ul>
+

@@ -1,0 +1,12 @@
+﻿
+@model IEnumerable<onlineshoppingstore.Models.Category>
+
+
+@foreach (var category in Model)
+{
+
+    <p class="btn">
+        @Html.ActionLink(category.Name, "Browse", "Store", new { category = category.Name } );
+        </p>
+
+}
